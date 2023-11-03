@@ -1,50 +1,53 @@
 menu:
-  # 文章:
-  #   隧道: /archives/ || anzhiyu-icon-box-archive
-  #   分类: /categories/ || anzhiyu-icon-shapes
-  #   标签: /tags/ || anzhiyu-icon-tags
+  文库:
+    时间轴: /archives/ # || fas fa-box-archive
+    所有分类: /categories/ #|| fas fa-cube
+    所有标签: /tags/ #|| fas fa-tags
+    随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
+    # 即刻短文: /essay/ #|| fas fa-bars-staggered
+  计算机基础:
+    Linux: /categories/Linux
+    编译链接:  /categories/编译链接
+  C++:
+    合集: /categories/C/ #|| fas fa-scissors
+    惯用法: /categories/C/C-惯用法/ # || fas fa-palette
+    核心指南: /categories/C/C-核心指南/ # || fas fa-swatchbook
+    现代 C++: /categories/C/现代-C/ # || fas fa-object-group
+  代码工匠:
+    设计模式: /categories/设计模式/
+    设计原则: /categories/设计原则/
+    软件架构: /categories/软件架构/
+  汽车电子:
+    Adaptive AUTOSAR: /categories/Adaptive-AUTOSAR/
+    SOA: /categories/SOA/
+    DDS: /categories/DDS/
+  我的收藏:
+    装备: /equipment/ # || fa-fw heofont icon-bijiben
+    音乐: /music/ # || fa-fw heofont icon-bijiben
+    图片: /equipment/ # || fa-fw heofont icon-bijiben
+    电影: /equipment/ # || fa-fw heofont icon-bijiben
+  关于: /about/ # || fas fa-sailboat
 
-  # 友链:
-  #   友人帐: /link/ || anzhiyu-icon-link
-  #   朋友圈: /fcircle/ || anzhiyu-icon-artstation
-  #   留言板: /comments/ || anzhiyu-icon-envelope
-
-  # 我的:
-  #   音乐馆: /music/ || anzhiyu-icon-music
-  #   追番页: /bangumis/ || anzhiyu-icon-bilibili
-  #   相册集: /album/ || anzhiyu-icon-images
-  #   小空调: /air-conditioner/ || anzhiyu-icon-fan
-
-  # 关于:
-  #   关于本人: /about/ || anzhiyu-icon-paper-plane
-  #   闲言碎语: /essay/ || anzhiyu-icon-lightbulb
-  #   随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
-
-# nav相关配置
 nav:
-  enable: false
+  enable: true
   travelling: false
   clock: false
   menu:
-    - title: 网页
+    - title: 我的其他站点
       item:
-        - name: 博客
-          link: https://blog.anheyu.com/
+        - name: 博客园
+          link: https://www.cnblogs.com/tengzijian/
           icon: /img/favicon.ico
-    - title: 项目
-      item:
-        - name: 安知鱼图床
-          link: https://image.anheyu.com/
-          icon: https://image.anheyu.com/favicon.ico
+        - name: GitHub
+          link: https://github.com/zijian-teng
+          icon: /img/favicon.ico
+        - name: 500px
+          link: https://500px.com/p/zi-jian
+          icon: /img/favicon.ico
 
-# mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
-# 注意： 仅网站首页变灰，其他页面正常显示
 mourn:
   enable: false
   days: [4-5, 5-12, 7-7, 9-18, 12-13]
-
-# Code Blocks (代码相关)
-# --------------------------------------
 
 highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
@@ -53,9 +56,6 @@ highlight_shrink: false # true: shrink the code blocks / false: expand the code 
 highlight_height_limit: 330 # unit: px
 code_word_wrap: false
 
-# copy settings
-# copyright: Add the copyright information after copied content (複制的内容后面加上版权信息)
-# copy: enable 复制后弹窗提示版权信息
 copy:
   enable: true
   copyright:
@@ -66,23 +66,24 @@ copy:
 # formal:
 #   name: link || icon
 social:
-  # Github: https://github.com/anzhiyu-c || anzhiyu-icon-github
-  # BiliBili: https://space.bilibili.com/372204786 || anzhiyu-icon-bilibili
+  Github: https://github.com/anzhiyu-c || anzhiyu-icon-github
+  BiliBili: https://space.bilibili.com/372204786 || fab fa-500px
+  # GIIITTT: https://space.bilibili.com/372204786 || fab fa-github
 
 # 作者卡片 状态
 author_status:
-  enable: false
+  enable: true
   # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
   statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   skills:
-    # - 🤖️ 数码科技爱好者
-    # - 🔍 分享与热心帮助
-    # - 🏠 智能家居小能手
-    # - 🔨 设计开发一条龙
-    # - 🤝 专修交互与设计
-    # - 🏃 脚踏实地行动派
-    # - 🧱 团队小组发动机
-    # - 💢 壮汉人狠话不多
+    - 🤖️ 数码科技爱好者
+    - 🔍 分享与热心帮助
+    - 🏠 智能家居小能手
+    - 🔨 设计开发一条龙
+    - 🤝 专修交互与设计
+    - 🏃 脚踏实地行动派
+    - 🧱 团队小组发动机
+    - 💢 壮汉人狠话不多
 
 # search (搜索)
 # see https://blog.anheyu.com/posts/c27d.html#搜索系统
@@ -162,6 +163,7 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
+    - /img/hello.jpg
     # - /img/default_cover.jpg
 
 # Replace Broken Images (替换无法显示的图片)
@@ -227,14 +229,14 @@ toc:
   post: true
   page: false
   number: true
-  expand: false
+  expand: true
   style_simple: false # for post
 
 post_copyright:
   enable: true
   decode: false
   author_href:
-  location: 长沙
+  location: 上海!
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   avatarSinks: false # hover时头像下沉
@@ -299,7 +301,7 @@ noticeOutdate:
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: true
+  enable: false
   sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
@@ -411,7 +413,7 @@ crisp:
 # --------------------------------------
 footer:
   owner:
-    enable: true
+    enable: false
     since: 2020
   custom_text:
   runtime:
@@ -510,7 +512,7 @@ footer:
     enable: true
     authorLink: /
     cc:
-      enable: false
+      enable: true
       link: /copyright
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
@@ -768,7 +770,7 @@ subtitle:
 
 # Loading Animation (加载动画)
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
@@ -793,14 +795,14 @@ aside:
     category: true
   card_author:
     enable: true
-    description: # <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
+    description: <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
     name_link: /
 
   card_announcement:
     enable: false
     content: 欢迎来看我的博客鸭~
   card_weixin:
-    enable: true
+    enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
     backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
   card_recent_post:
@@ -809,9 +811,9 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: false
-    limit: 8 # if set 0 will show all
-    expand: none # none/true/false
+    enable: true
+    limit: 0 # if set 0 will show all
+    expand: false # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
@@ -819,10 +821,10 @@ aside:
     color: false
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
-      # - Hexo
-      # - 前端
+      - CXX
+      - 骑行
   card_archives:
-    enable: true
+    enable: false
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -831,7 +833,7 @@ aside:
   card_webinfo:
     enable: true
     post_count: true
-    last_push_date: false
+    last_push_date: true
     sort_order: # Don't modify the setting unless you know how it works
 
 # busuanzi count for PV / UV in site
@@ -860,7 +862,7 @@ newest_comments:
 
 # Conversion between Traditional and Simplified Chinese (简繁转换)
 translate:
-  enable: true
+  enable: false
   # The text of a button
   default: 繁
   # Right-click menu default text
@@ -879,21 +881,21 @@ translate:
   rightMenuMsgToSimplifiedChinese: "转为简体"
 
 # Read Mode (閲读模式)
-readmode: true
+readmode: false
 
 # 中控台
 centerConsole:
   enable: true
   card_tags:
-    enable: false
+    enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
       # - Hexo
       # - 前端
   card_archives:
-    enable: false
+    enable: true
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -902,9 +904,9 @@ centerConsole:
 
 # dark mode
 darkmode:
-  enable: true
+  enable: false
   # Toggle Button to switch dark/light mode
-  button: true
+  button: false
   # Switch dark/light mode automatically (自动切换 dark mode和 light mode)
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
@@ -961,7 +963,7 @@ note:
 
 icons:
   ali_iconfont_js: # 阿里图标symbol 引用链接，主题会进行加载 symbol 引用
-  fontawesome: false #是否启用fontawesome6图标
+  fontawesome: true #是否启用fontawesome6图标
   fontawesome_animation_css: #fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css
 
 # other
@@ -993,7 +995,7 @@ snackbar:
 
 # https://instant.page/
 # prefetch (预加载)
-instantpage: true
+instantpage: false
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
@@ -1004,7 +1006,7 @@ pangu:
 # Lazyload (图片懒加载)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: true
+  enable: false
   field: site # site/post
   placeholder:
   blur: true
@@ -1033,7 +1035,7 @@ css_prefix: true
 
 # 首页顶部相关配置
 home_top:
-  enable: true # 开关
+  enable: false # 开关
   timemode: date #date/updated
   title: 生活明朗
   subTitle: 万物可爱。
@@ -1134,37 +1136,37 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: false #开启后必须配置下面的list对应的时间段，不然会出现小白条
+  enable: true #开启后必须配置下面的list对应的时间段，不然会出现小白条
   default: 晚上好👋
   list:
-    # - greeting: 晚安😴
-    #   startTime: 0
-    #   endTime: 5
-    # - greeting: 早上好鸭👋, 祝你一天好心情！
-    #   startTime: 6
-    #   endTime: 9
-    # - greeting: 上午好👋, 状态很好，鼓励一下～
-    #   startTime: 10
-    #   endTime: 10
-    # - greeting: 11点多啦, 在坚持一下就吃饭啦～
-    #   startTime: 11
-    #   endTime: 11
-    # - greeting: 午安👋, 宝贝
-    #   startTime: 12
-    #   endTime: 14
-    # - greeting: 🌈充实的一天辛苦啦！
-    #   startTime: 14
-    #   endTime: 18
-    # - greeting: 19点喽, 奖励一顿丰盛的大餐吧🍔。
-    #   startTime: 19
-    #   endTime: 19
-    # - greeting: 晚上好👋, 在属于自己的时间好好放松😌~
-    #   startTime: 20
-    #   endTime: 24
+    - greeting: 晚安😴
+      startTime: 0
+      endTime: 5
+    - greeting: 早上好鸭👋, 祝你一天好心情！
+      startTime: 6
+      endTime: 9
+    - greeting: 上午好👋, 状态很好，鼓励一下～
+      startTime: 10
+      endTime: 10
+    - greeting: 11点多啦, 在坚持一下就吃饭啦～
+      startTime: 11
+      endTime: 11
+    - greeting: 午安👋, 宝贝
+      startTime: 12
+      endTime: 14
+    - greeting: 🌈充实的一天辛苦啦！
+      startTime: 14
+      endTime: 18
+    - greeting: 19点喽, 奖励一顿丰盛的大餐吧🍔。
+      startTime: 19
+      endTime: 19
+    - greeting: 晚上好👋, 在属于自己的时间好好放松😌~
+      startTime: 20
+      endTime: 24
 
 # 文章顶部ai摘要
 post_head_ai_description:
-  enable: true
+  enable: false
   gptName: AnZhiYu
   mode: local # 默认模式 可选值: tianli/local
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
@@ -1182,7 +1184,7 @@ shortcutKey:
 
 # 无障碍优化（在首页按下「shift + ?」以查看效果）
 accesskey:
-  enable: true
+  enable: false
 
 # 友情链接顶部相关配置
 linkPageTop:

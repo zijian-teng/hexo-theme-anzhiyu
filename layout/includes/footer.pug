@@ -83,11 +83,12 @@ if theme.footer.footerBar && theme.footer.footerBar.enable
           .js-pjax
             include ./third-party/footerBarSubtitle.pug
       .footer-bar-right
-        each item in theme.footer.footerBar.linkList
-          a.footer-bar-link(href=url_for(item.link) title=item.text)=item.text
+        //- each item in theme.footer.footerBar.linkList
+        //-   a.footer-bar-link(href=url_for(item.link) title=item.text)=item.text
+        a.footer-bar-link(href='/' title="copyright") Powered by Hexo & Acrylic
         if theme.footer.footerBar.cc.enable
           a.footer-bar-link.cc(href=url_for(theme.footer.footerBar.cc.link) title="cc协议")
-            i.anzhiyufont.anzhiyu-icon-copyright-line
-            i.anzhiyufont.anzhiyu-icon-creative-commons-by-line
-            i.anzhiyufont.anzhiyu-icon-creative-commons-nc-line
-            i.anzhiyufont.anzhiyu-icon-creative-commons-nd-line
+            i.fa-regular.fa-copyright
+            i.fa-brands.fa-creative-commons-by
+            i.fa-brands.fa-creative-commons-nc
+            i.fa-brands.fa-creative-commons-nd

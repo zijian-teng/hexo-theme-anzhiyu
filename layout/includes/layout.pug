@@ -59,7 +59,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
 
         footer#footer(style=footer_bg)
           !=partial('includes/footer', {}, {cache: true})
-        
+
         if (theme.agreementPopup && theme.agreementPopup.enable && is_home_first_page())
           - let agreementPopupUrl = theme.agreementPopup.url
           script(defer).
